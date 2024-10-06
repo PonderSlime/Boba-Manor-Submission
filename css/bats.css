@@ -2,6 +2,10 @@
     position: absolute;
     width: 600px;
     height: 600px;
+    align-self: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     pointer-events: none;
     }
     .explosion .particle {
@@ -9,7 +13,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    animation: pop 2s reverse forwards;
+    animation: pop 3s reverse forwards;
     }
 
     @keyframes pop {
@@ -26,3 +30,10 @@
     height: 100%;
     background: #555;
     }
+
+.btn {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
