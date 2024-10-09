@@ -39,7 +39,7 @@ $.fn.explode = function(e) {
       color = rand(0, 255) + ', ' + rand(0, 255) + ', ' + rand(0, 255), // randomize the color rgb
       angle = calcAngleDegrees(x,y) + 90;
           // particle element creation (could be anything other than div)
-      elm = $('<img class="particle" src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" style="width: 10%; height: auto;align:middle; top: ' + y + 'px;left: ' + x + 'px; transform:translate(-50%,-50%) rotate(' + angle + 'deg)">');/* '<div class="particle" style=""' + */
+      elm = $('<img class="particle" src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" style="width: 25%; height: auto;align:middle; top: ' + y + 'px;left: ' + x + 'px; transform:translate(-50%,-50%) rotate(' + angle + 'deg)">');/* '<div class="particle" style=""' + */
 
       if (i == 0) { // no need to add the listener on all generated elements
       // css3 animation end detection
@@ -56,8 +56,8 @@ $.fn.explode = function(e) {
   return Math.floor(Math.random() * (max + 1)) + min;
   }
 
-function clickme() {
-	$(document).on('click', '.btn', function(e) {
+function batSpawn() {
+	$(document).on('click', '.bats', function(e) {
 		$(this).explode(e);
 	});
 }

@@ -8,17 +8,31 @@
         <script src="./js/main.js" defer></script>
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
         <script src="./js/bats.js"></script>
-        
+        <link href="./assets/fa/css/fontawesome.css" rel="stylesheet">
+        <link href="./assets/fa/css/solid.css" rel="stylesheet">
+
+        <link href="./css/main.css" rel="stylesheet">
+        <link href="./css/bats.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Vampiro+One&display=swap" rel="stylesheet">
         <title>PonderSlime's Manor Room</title>
         <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/PonderSlime/ponderslime.github.io/main/images/v2_3605.png">
+
+        <script src="js/background_music.js"></script>
+
+        
+
+        
     </head>
-    <body style="background-color: #111111;" class="vampiro-one-regular">
+    <body class="vampiro-one-regular">
+        <audio id="bg-music" loop>
+            <source src="assets/music/Slower_Version-2020-10-23_-_Phantom_In_The_Organ_-_www.FesliyanStudios.com_Steve_Oxen.mp3" type="audio/mp3">
+        </audio>
+        <div class="audioPause bats"><button onclick="togglePlay(), batSpawn()" class="audioPauseButton"><i id="audioIcon" class="fas fa-volume-xmark" style="font-size: 30px;"></i></i></button></div>
         <h1>Welcome to the library</h1>
+        <img src="./assets/images/Bookshelf with Cat and Books.svg" style="width: 80vw; height: auto; align-self: center;">
     </body>
 </html>
 <style>
-        
         body {
             display: flex; 
             flex-direction: column; 
@@ -28,6 +42,7 @@
             font-family: 'Creepster';
             color: crimson;
         }
+        
         .creepster-regular {
             font-family: "Creepster", system-ui;
             font-weight: 400;

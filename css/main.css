@@ -1,0 +1,14 @@
+.audioPause {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 40px;
+    border: 10px solid #f32177;
+    border-radius: 50%;
+    
+    }
+.audioPauseButton {
+    background-color: rgba(0, 0, 0, 0);
+    border: rgba(0, 0, 0, 0);
+    color: #f32177;
+}

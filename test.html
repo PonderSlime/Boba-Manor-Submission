@@ -1,13 +1,43 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-        <script type="text/javascript" src="js/bats.js" defer></script>
+        <script src="js/bats.js" type="text/javascript"defer></script>
+        <script src="js/background_music.js"></script>
         <link href="./css/bats.css" rel="stylesheet">
+        <link href="./css/main.css" rel="stylesheet">
+        <link href="./assets/fa/css/fontawesome.css" rel="stylesheet">
+        <link href="./assets/fa/css/solid.css" rel="stylesheet">
     </head>
     <body>
-        <h1>click anywhere<button class="btn" onclick="clickme()">click me actually</button></h1>
-        
+        <audio id="bg-music" loop>
+            <source src="assets/music/Slower_Version-2020-10-23_-_Phantom_In_The_Organ_-_www.FesliyanStudios.com_Steve_Oxen.mp3" type="audio/mp3">
+        </audio>
+        <h1>click anywhere
+            <button class="bats" onclick="batSpawn()">click me for bats!</button>
+            <div class="audioPause bats"><button onclick="togglePlay(), batSpawn()" class="audioPauseButton"><i id="audioIcon" class="fas fa-volume-xmark" style="font-size: 30px;"></i></i></button></div>
+        </h1>
+        <p style="padding-inline: 40%;">Lorem ipsum odor amet, consectetuer adipiscing elit. Leo porta aenean integer; donec nulla mattis. Aliquet nascetur himenaeos imperdiet ultricies erat. Penatibus urna venenatis a maximus neque at eleifend. Ultricies vehicula quis potenti semper sollicitudin ridiculus nostra. Nec non commodo faucibus condimentum magnis suscipit.
+
+            Donec neque vulputate taciti finibus arcu dictumst mauris pellentesque. Mattis pulvinar vestibulum fringilla commodo bibendum bibendum nibh lobortis mus. Porttitor accumsan aptent lobortis nunc luctus. Aauctor magna quisque; nec mollis per ad. Vehicula luctus justo venenatis cras lorem pharetra potenti quam. Varius nullam non platea a malesuada auctor proin. Maximus montes magnis odio sit platea netus dapibus. Vulputate nostra tempor habitant malesuada facilisi donec maecenas magnis. Nibh nulla etiam volutpat ipsum vestibulum sem taciti. Nisl pulvinar ad curabitur tincidunt quis lacinia himenaeos.
+            
+            Gravida ante senectus adipiscing; feugiat tellus praesent cubilia potenti sapien. Purus ridiculus ultrices nec montes amet. Est parturient taciti metus vivamus velit sagittis accumsan. Condimentum eu mauris scelerisque cras; tellus habitant eros. Posuere ex duis quis bibendum maecenas. Accumsan auctor proin quam; natoque pretium lacus mus montes. Tortor cubilia volutpat quam lobortis dictum gravida torquent vehicula. Dui imperdiet massa neque facilisi lacus; praesent non enim.
+            
+            Dolor vel facilisis natoque fermentum nulla a fusce. Euismod convallis accumsan morbi nam hendrerit. Aconubia litora urna cras fames mauris integer ac luctus. Sagittis risus quisque, pharetra blandit posuere dignissim? In eu interdum ullamcorper maecenas magna pharetra tristique. Anon non fusce imperdiet ullamcorper duis.
+            
+            Pretium mattis magna risus, fermentum tortor tortor commodo himenaeos. Arcu volutpat dis at semper; enim malesuada diam. Senectus accumsan phasellus a magnis, purus nostra vitae. Curae vestibulum quis imperdiet aliquam mollis cubilia suspendisse. Augue venenatis nostra ridiculus viverra phasellus varius. Enim leo eu integer ac id dignissim vehicula. Diam et donec ex elementum lorem condimentum gravida. Interdum varius ad arcu; rhoncus phasellus et tristique. Ultrices nostra eu sem praesent vehicula odio vehicula.
+            
+            Viverra porta etiam id purus fusce dui suscipit nibh. Feugiat curae maecenas erat gravida vestibulum vestibulum scelerisque. Malesuada mauris montes aenean habitasse, ante varius justo luctus erat. Sem eu adipiscing ex netus purus facilisis. Suscipit proin tortor nibh risus aliquam vivamus. Enim non placerat sodales est aliquet nisl consectetur porttitor nunc. Orci varius imperdiet lacinia ex volutpat lacinia. Tristique praesent quisque litora; nunc inceptos consequat lacus. In donec fusce mi sapien congue nostra lectus. Placerat senectus netus mus fames purus ridiculus himenaeos bibendum consectetur.
+            
+            Turpis non fermentum interdum mattis elementum habitant ut ut. Habitant tempor etiam, imperdiet ornare eget suspendisse facilisis. Vestibulum sed commodo ante dictum amet facilisis montes. Ut turpis justo morbi ante ad aliquam hac? Facilisi non justo eros ultrices luctus vivamus erat. Posuere habitant curae proin potenti sodales himenaeos a? Mi tortor gravida massa, sapien per litora massa.
+            
+            Primis enim nullam morbi varius; etiam dapibus dictum. Dapibus cursus aliquet euismod justo magna vitae maximus justo. Vel justo dapibus pulvinar aenean accumsan fames rhoncus nisl dolor. Duis faucibus pharetra aenean purus rutrum congue id. Tellus commodo dui ullamcorper placerat condimentum. Integer dignissim mauris nunc arcu dignissim sed. Odio nisi pulvinar fringilla dictumst suscipit pulvinar viverra commodo. Sed urna orci consectetur a augue. Vitae volutpat risus nunc turpis felis mi duis. Nec nisi gravida per ac, sapien potenti erat.
+            
+            Himenaeos nec metus cras dignissim massa nostra mattis. Justo felis at pretium et finibus nisl ligula bibendum magna. Pellentesque quam habitasse sodales tincidunt quisque enim sodales orci. Nostra sit platea phasellus porta justo sed finibus dui. Nibh ullamcorper auctor metus ornare nam nostra. Nec himenaeos placerat aliquam magna imperdiet lacus metus pulvinar quam. Lacus eget tortor vehicula diam fames auctor imperdiet amet lacus. Taciti non in elit habitant ac bibendum dui dapibus. Hendrerit a luctus dictum aliquet curae a. Aptent nisl taciti ultricies dictum imperdiet suscipit.
+            
+            Nunc magnis quam fringilla consequat laoreet ullamcorper inceptos fringilla curae. Tristique ac donec ad consequat ullamcorper; vestibulum adipiscing. Sociosqu vitae rhoncus varius; consectetur suspendisse placerat. Litora sodales convallis integer sit facilisi et amet. Laoreet suspendisse dis cras nascetur viverra cras non. Porta neque eget varius fames habitasse. Ac ex eros hac metus feugiat. Tempor diam lacinia ridiculus inceptos vehicula, justo metus.</p>
+        <script>
+            
+        </script>
     </body>
 </html>
