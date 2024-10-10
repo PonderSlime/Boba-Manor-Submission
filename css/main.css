@@ -12,7 +12,7 @@
     border: rgba(0, 0, 0, 0);
     color: #f32177;
 }
-.site {
+body {
     background-color: #ffffff;
     display: flex; 
     flex-direction: column; 
