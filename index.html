@@ -2,8 +2,7 @@
 <html>
     <head id="myHead">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Vampiro+One&display=swap" rel="stylesheet">
+
         <title>PonderSlime's Manor Room</title>
         <script src="./js/main.js" defer></script>
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -11,49 +10,27 @@
         <link href="./assets/fa/css/fontawesome.css" rel="stylesheet">
         <link href="./assets/fa/css/solid.css" rel="stylesheet">
 
+        
         <link href="./css/main.css" rel="stylesheet">
         <link href="./css/bats.css" rel="stylesheet">
+
         <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Vampiro+One&display=swap" rel="stylesheet">
         <title>PonderSlime's Manor Room</title>
         <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/PonderSlime/ponderslime.github.io/main/images/v2_3605.png">
 
         <script src="js/background_music.js"></script>
-
-        
-
         
     </head>
-    <body class="vampiro-one-regular">
-        <audio id="bg-music" loop>
-            <source src="assets/music/Slower_Version-2020-10-23_-_Phantom_In_The_Organ_-_www.FesliyanStudios.com_Steve_Oxen.mp3" type="audio/mp3">
-        </audio>
-        <div class="audioPause bats"><button onclick="togglePlay(), batSpawn()" class="audioPauseButton"><i id="audioIcon" class="fas fa-volume-xmark" style="font-size: 30px;"></i></i></button></div>
-        <h1>Welcome to the library</h1>
-        <img src="./assets/images/Bookshelf with Cat and Books.svg" style="width: 80vw; height: auto; align-self: center;">
+    <body class="site vampiro-one-regular">
+            <audio id="bg-music" loop>
+                <source src="assets/music/Slower_Version-2020-10-23_-_Phantom_In_The_Organ_-_www.FesliyanStudios.com_Steve_Oxen.mp3" type="audio/mp3">
+            </audio>
+            
+            <div class="audioPause bats"><button onclick="togglePlay(), batSpawn()" class="audioPauseButton"><i id="audioIcon" class="fas fa-volume-xmark" style="font-size: 30px;"></i></i></button></div>
+            <div class="parallax"><h1 class="welcome">Welcome to the library</h1></div> 
+            <div class="catshelf"><img src="./assets/images/Bookshelf with Cat and Books.svg" style="width: 80vw; height: auto; align-self: center;"></div>
     </body>
 </html>
-<style>
-        body {
-            display: flex; 
-            flex-direction: column; 
-            min-height: 100vh; 
-            margin: 0;
-            padding: 0;
-            font-family: 'Creepster';
-            color: crimson;
-        }
-        
-        .creepster-regular {
-            font-family: "Creepster", system-ui;
-            font-weight: 400;
-            font-style: normal;
-        }
-        .vampiro-one-regular {
-            font-family: "Vampiro One", system-ui;
-            font-weight: 400;
-            font-style: normal;
-        }
-</style>
 <script>
 
 </script>

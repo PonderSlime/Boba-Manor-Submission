@@ -12,3 +12,50 @@
     border: rgba(0, 0, 0, 0);
     color: #f32177;
 }
+.site {
+    background-color: #ffffff;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Creepster';
+    color: crimson;
+    
+}
+
+.parallax {
+  /* The image used */
+    background-image: url("../assets/images/1328863.png");
+
+  /* Set a specific height */
+    min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcome {
+  text-align: center;
+  vertical-align: center;
+}
+
+.creepster-regular {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.vampiro-one-regular {
+    font-family: "Vampiro One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.catshelf {
+  padding-top: 40%;
+  align-self: center;
+}
+
