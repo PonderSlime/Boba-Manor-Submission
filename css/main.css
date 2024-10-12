@@ -13,13 +13,13 @@
     color: #f32177;
 }
 body {
-    background-color: #ffffff;
     display: flex; 
     flex-direction: column; 
     margin: 0;
     padding: 0;
     font-family: 'Creepster';
     color: crimson;
+    background-color: #1f1f1f;
 }
 
 .parallax {
@@ -64,6 +64,16 @@ body {
   
 }
 .skeletonMeme {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+.hauntedMansionPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+.thrillerPopup {
   position: fixed;
   top: 50%;
   left: 50%;
