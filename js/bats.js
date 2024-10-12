@@ -7,16 +7,6 @@ function calcAngleDegrees(xx, yy) {
   return (Math.atan2(yy, xx) * 180) / Math.PI;
 }
 const radians_to_degrees = rad => (rad * 180.0) / Math.PI;
-/* 
-function clickme() {
-  // click event listener
-  $('button').on('click', function(e) {
-    explode(e.pageX, e.pageY);
-    })
-    
-
-} */
-
 
 // explosion construction
 $.fn.explode = function(e) {

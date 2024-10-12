@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<script>
+    function hauntedMansionFn() {
+        togglePlay(document.getElementById('haunted-mansion-theme'), 0);
+        popup(document.getElementById('hauntedMansionPopup'));
+    }
+    function spookyScarySkeletonFn() {
+        togglePlay(document.getElementById('spooky-scary-skeletons-remix'), 0);
+        popup(document.getElementById('skeletonMeme'));
+    }
+    function thrillerFn() {
+        togglePlay(document.getElementById('thriller'), 0);
+        popup(document.getElementById('thrillerGif'));
+    }
+</script>
 <html>
     <head id="myHead">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,23 +28,48 @@
         <link href="./css/main.css" rel="stylesheet">
         <link href="./css/bats.css" rel="stylesheet">
 
-        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Vampiro+One&display=swap" rel="stylesheet">
+        
         <title>PonderSlime's Manor Room</title>
         <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/PonderSlime/ponderslime.github.io/main/images/v2_3605.png">
 
-        <script src="js/background_music.js"></script>
-        
+        <script src="js/toggle_play.js"></script>
+        <script src="js/book_popups.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Shadows+Into+Light&family=Vampiro+One&display=swap" rel="stylesheet">
     </head>
-    <body class="site vampiro-one-regular">
-            <audio id="bg-music" loop>
-                <source src="assets/music/Slower_Version-2020-10-23_-_Phantom_In_The_Organ_-_www.FesliyanStudios.com_Steve_Oxen.mp3" type="audio/mp3">
-            </audio>
+    <body style="background-color: #ffffff;">
+        <div class="audioFiles">
+            <audio id="bg-music" class="audioFile" loop>
+            <source src="assets/music/Slower_Version-2020-10-23_-_Phantom_In_The_Organ_-_www.FesliyanStudios.com_Steve_Oxen.mp3" type="audio/mp3">
+        </audio>
+        <audio id="spooky-scary-skeletons-remix" class="audioFile" loop>
+            <source src="assets/music/spooky-scary-skeletons-remix.mp3">
+        </audio>
+        <audio id="haunted-mansion-theme" class="audioFile" loop>
+            <source src="assets/music/61 Grim Grinning Ghosts.mp3">
+        </audio>
+        <audio id="thriller" class="audioFile" loop>
+            <source src="assets/music/04. Thriller.mp3">
+        </audio>
+        </div>
+        
+        <div class="audioPause bats"><button onclick="togglePlay(document.getElementById('bg-music'), 1), batSpawn()" class="audioPauseButton"><i id="audioIcon" class="fas fa-volume-xmark" style="font-size: 30px;"></i></i></button></div>
+        <div class="parallax">
             
-            <div class="audioPause bats"><button onclick="togglePlay(), batSpawn()" class="audioPauseButton"><i id="audioIcon" class="fas fa-volume-xmark" style="font-size: 30px;"></i></i></button></div>
-            <div class="parallax"><h1 class="welcome">Welcome to the library</h1></div> 
-            <div class="catshelf"><img src="./assets/images/Bookshelf with Cat and Books.svg" style="width: 80vw; height: auto; align-self: center;"></div>
+                <h1 class="welcome shadows-into-light" style="padding-top: 100px; font-size: 7.5vw;">Welcome to the library</h1>
+                <h1 class="vampiro-one-regular">hello</h1>
+                <div class="bookshelf" style="transform: scale(0.25,0.25);">
+                    <div class="catshelf"><img src="./assets/images/Bookshelf with Cat and Books.svg" style="width: 2388px; height: 2584px;" usemap="#workmap"></div>
+                    <map name="workmap">
+                        <area shape="rect" coords="941, 1620, 1486, 1729" onclick="hauntedMansionFn()" href="#hauntedMansion">
+                        <area shape="rect" coords="505, 2269, 1098, 2380" onclick="spookyScarySkeletonFn()" href="#spookyScarySkeleton">
+                        <area shape="rect" coords="1600, 2379, 2198, 2490" onclick="thrillerFn()" href="#thriller">
+                    </map>
+                </div>
+
+        </div>
+
+        <div class="skeletonMeme" id="skeletonMeme" style="display: none;">
+            <img src="./assets/images/spooky-scary-skeleton-animation.gif" style="width: 60vw; height: auto;align-self: center; text-align: center;transform: translate(-50%,-50%);">
+        </div>
     </body>
 </html>
-<script>
-
-</script>
