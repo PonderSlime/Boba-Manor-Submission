@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <script>
-    function hauntedMansionFn() {
-        togglePlay(document.getElementById('haunted-mansion-theme'), 0);
-        popup(document.getElementById('hauntedMansionPopup'));
-    }
-    function spookyScarySkeletonFn() {
-        togglePlay(document.getElementById('spooky-scary-skeletons-remix'), 0);
-        popup(document.getElementById('skeletonMeme'));
-    }
-    function thrillerFn() {
-        togglePlay(document.getElementById('thriller'), 0);
-        popup(document.getElementById('thrillerPopup'));
-    }
+    
 </script>
 <html>
     <head id="myHead">
@@ -38,7 +27,7 @@
     </head>
     <body>
         <div class="audioFiles">
-            <audio id="bg-music" class="audioFile" loop>
+        <audio id="bg-music" class="audioFile" loop>
             <source src="assets/music/Slower_Version-2020-10-23_-_Phantom_In_The_Organ_-_www.FesliyanStudios.com_Steve_Oxen.mp3" type="audio/mp3">
         </audio>
         <audio id="spooky-scary-skeletons-remix" class="audioFile" loop>
@@ -50,37 +39,100 @@
         <audio id="thriller" class="audioFile" loop>
             <source src="assets/music/04. Thriller.mp3">
         </audio>
+        <audio id="back-to-the-future" class="audioFile" loop>
+            <source src="assets/music/Back to the Future Theme.wav">
+        </audio>
+        <audio id="e-t" class="audioFile" loop>
+            <source src="assets/music/ET Movie Theme.mp3">
+        </audio>
+
+        <audio id="quote1" src="./assets/music/clips/hello-my-name-is-inigo-montoya-you-killed-my-father-prepare-to-die.mp3" type="audio/mp3">
+        <audio id="quote2" src="./assets/music/clips/listen-do-you-hear-that-is-the-sound-of-ultimate-suffering.mp3" type="audio/mp3">
+        <audio id="quote3" src="./assets/music/clips/there-will-be-blood-tonight.mp3" type="audio/mp3">
+        <audio id="quote4" src="./assets/music/clips/1-21-gigawatts!-1-21-gigawatts.mp3" type="audio/mp3">
+        <audio id="quote5" src="./assets/music/clips/hey-have-you-come-to-sing-pumpkin-carols.mp3" type="audio/mp3">
+        <audio id="quote6" src="./assets/music/clips/listen-you-got-a-back-door-to-this-place-yeah-it-s-in-the-back-let-s-go-doc.mp3" type="audio/mp3">
+        <audio id="quote7" src="./assets/music/clips/marty-you-re-not-thinking-fourth-dimensionally.mp3" type="audio/mp3">
+        <audio id="quote8" src="./assets/music/clips/remember-where-you-re-going-there-are-no-roads.mp3" type="audio/mp3">
+        <audio id="quote9" src="./assets/music/clips/ten-minutes-why-do-we-have-to-cut-these-things-so-damn-close.mp3" type="audio/mp3">
+        <audio id="quote10" src="./assets/music/clips/there-are-plenty-worse-places-to-be-than-the-old-west-i-could-have-ended-up-in-the-dark-ages-they-probably-would-have-burned-me-at-the-stake-as-a-heretic-or-somet.mp3" type="audio/mp3">
+        <audio id="quote11" src="./assets/music/clips/this-is-the-time-of-year-to-write-to-the-great-pumpkin-on-halloween-night-the-great-pumpkin-rises-out-of-his-pumpkin-patch-and-flies-through-the-air-with-a-bag-of.mp3" type="audio/mp3">
+        <audio id="quote12" src="./assets/music/clips/traveling-through-time-has-become-much-too-painful.mp3" type="audio/mp3">
         </div>
         
-        <div class="audioPause bats audioPauseButton" onclick="togglePlay(document.getElementById('bg-music'), 1), batSpawn()"><i id="audioIcon" class="fas fa-volume-xmark" style="font-size: 30px;"></i></div>
+        <div class="audioPause bats audioPauseButton" onclick="toggleMute(), batSpawn()"><i id="audioIcon" class="fas fa-volume-xmark" style="font-size: 30px;"></i></div>
         <div class="parallax">
             
                 <h1 class="welcome shadows-into-light" style="padding-top: 100px; font-size: 7.5vw;">Welcome to the library</h1>
-                <h1 class="vampiro-one-regular">hello</h1>
-                <div class="bookshelf" style="transform: scale(0.25,0.25)translate(-50%, -50%); align-items: center; align-self: center;">
-                    <div class="catshelf"><img src="./assets/images/Bookshelf with Cat and Books.svg" style="width: 2388px; height: 2584px;" usemap="#workmap"></div>
+                <div class="bookshelf">
+                    <div class="catshelf"><img src="./assets/images/Bookshelf with Cat and Books.svg" style="width: 2388px; height: auto;" usemap="#workmap"></div>
                     <map name="workmap">
                         <area shape="rect" coords="941, 1620, 1486, 1729" onclick="hauntedMansionFn()" href="#hauntedMansion">
                         <area shape="rect" coords="505, 2269, 1098, 2380" onclick="spookyScarySkeletonFn()" href="#spookyScarySkeleton">
                         <area shape="rect" coords="1600, 2379, 2198, 2490" onclick="thrillerFn()" href="#thriller">
+                        <area shape="rect" coords="438, 2155, 1038, 2267" onclick="backToTheFutureFn()" href="#backToTheFuture">
+                        <area shape="poly" coords="1966, 1916, 2070, 1953, 2252, 1392, 2144, 1356" onclick="memeryBookFn()" href="#memeryBook">
+                        <area shape="rect" coords="448, 2380, 1046, 2491" onclick="eTFn()" href="#et">
                     </map>
                 </div>
 
         </div>
+        <div class="creepster-regular">
+            <div class="book" id="skeletonMeme" style="display: none; align-items: center;align-self: center;transform: translate(-50%, -50%);">
+                <div class="fullscreen">
+                    <img class="backg" src="./assets/images/books/Open Book SSS.png" style="z-index: -100;">
+                </div>
+                <div class="popup">
+                    <button class="creepster-regular" onclick="spookyScarySkeletonFn()">Close Book</button>
+                    <img src="./assets/images/spooky-scary-skeleton-animation.gif" style="width: 30vw; height: auto;align-self: center; text-align: center;">
+                </div>
+            </div>
+            <div class="book" id="hauntedMansionPopup" style="display: none; align-items: center;align-self: center;transform: translate(-50%, -50%);">
+                <div class="fullscreen">
+                    <img class="backg" src="./assets/images/books/Open Book THM.png" style="z-index: -100;">
+                </div>
+                <div class="popup">
+                    <button class="creepster-regular" onclick="hauntedMansionFn()">Close Book</button>
+                    <img src="./assets/images/haunted-house.gif" style="width:30vw; height:auto; align-self: center; text-align: center;">
+                </div>
+            </div>
+            <div class="book" id="thrillerPopup" style="display: none; align-items: center;align-self: center;transform: translate(-50%, -50%);">
+                <div class="fullscreen">
+                    <img class="backg" src="./assets/images/books/Open Book T.png" style="z-index: -100;">
+                </div>
+                <div class="popup">
+                    <button class="creepster-regular" onclick="thrillerFn()">Close Book</button>
+                    <img src="./assets/images/thriller.gif" style="width:30vw; height:auto; align-self: center; text-align: center;">
+                </div>
+            </div>
+            <div class="book" id="backToTheFuturePopup" style="display: none; align-items: center;align-self: center;transform: translate(-50%, -50%);">
+                <div class="fullscreen">
+                    <img class="backg" src="./assets/images/books/Open Book BTTF.png" style="z-index: -100;">
+                </div>
+                <div class="popup">
+                    <button class="creepster-regular" onclick="backToTheFutureFn()">Close Book</button>
+                    <img src="./assets/images/bttf-musical.webp" style="width:30vw; height:auto; align-self: center; text-align: center;">
+                </div>
+            </div>
+            <div class="book" id="memeryBook" style="display: none; align-items: center;align-self: center;transform: translate(-50%, -50%);">
+                <div class="fullscreen">
+                    <img class="backg" src="./assets/images/books/Open Book MB.png" style="z-index: -100;">
+                </div>
+                <div class="popup">
+                    <button class="creepster-regular" onclick="memeryBookFn()"style="top:250px">Close Book</button>
+                    <button onclick="randomQuote()" style="background-color: #ffffff00; border-color: #ffffff00;"><div><h class="vampiro-one-regular"style="width:30vw; height:auto; align-self: center; text-align: center; font-size: 100px;">QUOTE THE MEME</h></div></button>
+                </div>
+            </div>
 
-        <div class="skeletonMeme" id="skeletonMeme" style="display: none; align-items: center;align-self: center;transform: translate(-50%, -50%);">
-            <button onclick="spookyScarySkeletonFn()">hehehehe</button>
-            <img src="./assets/images/spooky-scary-skeleton-animation.gif" style="width: 30vw; height: auto;align-self: center; text-align: center;">
-        </div>
-        <div class="hauntedMansionPopup" id="hauntedMansionPopup" style="display: none; align-items: center; align-items: center;align-self: center;transform: translate(-50%, -50%);">
-            <button onclick="hauntedMansionFn()">heehehehe</button>
-            <img src="./assets/images/haunted-house.gif" style="width:30vw; height:auto; align-self: center; text-align: center;">
-            
-        </div>
-        <div class="thrillerPopup" id="thrillerPopup" style="display: none; align-items: center; align-items: center;align-self: center;transform: translate(-50%, -50%);">
-            <button onclick="thrillerFn()">heehehehe</button>
-            <img src="./assets/images/thriller.gif" style="width:30vw; height:auto; align-self: center; text-align: center;">
-            
+            <div class="book" id="eTPopup" style="display: none; align-items: center;align-self: center;transform: translate(-50%, -50%);">
+                <div class="fullscreen">
+                    <img class="backg" src="./assets/images/books/Open Book HP.png" style="z-index: -100;">
+                </div>
+                <div class="popup">
+                    <button class="creepster-regular" onclick="eTFn()">Close Book</button>
+                    <img src="./assets/images/et-the-extra-terrestrial.webp" style="width:30vw; height:auto; align-self: center; text-align: center;">
+                </div>
+            </div>
         </div>
     </body>
 </html>

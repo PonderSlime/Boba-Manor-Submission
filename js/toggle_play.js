@@ -1,4 +1,5 @@
-let mute = true;
+/* let mute = true;
+let isPlaying = false;
 function togglePlay(audioT, isMuteButton) {
     var bg = document.getElementById("bg-music");
     x = document.getElementById("audioIcon");
@@ -6,15 +7,14 @@ function togglePlay(audioT, isMuteButton) {
     if (isMuteButton == 1) {
         mute = !mute;
     }
-/* 
     else if (isMuteButton == 0) {
-        bg.currentTime = 0;
-        bg.paused ? bg.play() : bg.pause();
-        bg.muted = true;
-    } */
+        isPlaying = !isPlaying;
+        alert(isPlaying);
+    }
 
     if (mute==false) {
         unmutePage()
+        
         x.classList.add('fa-volume-high');
         x.classList.remove('fa-volume-xmark');
     }
@@ -33,16 +33,23 @@ function togglePlay(audioT, isMuteButton) {
         audioT.pause();
         audioT.currentTime = 0;
     }
-
-
+    if (isPlaying == true) {
+        bg.mute = true;
+    }
 };
+*/
 
+var bg = document.getElementById("bg-music");
 function mutePage() {
     document.querySelectorAll("audio").forEach((elem) => muteMe(elem));
+    muteIcons();
+    
 }
+
 
 function unmutePage() {
     document.querySelectorAll("audio").forEach((elem) => unmuteMe(elem));
+    unmuteIcons()
 }
 
 function muteMe(elem) {
@@ -53,4 +60,18 @@ function muteMe(elem) {
 function unmuteMe(elem) {
     elem.muted=false;
     elem.currentTime = 0;
+}
+
+
+let isPlaying = false;
+function togglePlay(audioT) {
+    mutePage()
+    if (audioT.paused) {
+        audioT.muted = false;
+        audioT.play();
+    }
+    else if (!audioT.paused) {
+        audioT.pause();
+        audioT.currentTime = 0;
+    }
 }

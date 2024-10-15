@@ -3,14 +3,14 @@
     bottom: 2rem;
     right: 2rem;
     padding: 40px;
-    border: 10px solid #f32177;
+    border: 10px solid #610a0a;
     border-radius: 50%;
-    
+    z-index: 100;
     }
 .audioPauseButton {
     background-color: rgba(0, 0, 0, 0);
     border: rgba(0, 0, 0, 0);
-    color: #f32177;
+    color: #610a0a;
 }
 body {
     display: flex; 
@@ -20,6 +20,7 @@ body {
     font-family: 'Creepster';
     color: crimson;
     background-color: #1f1f1f;
+    height: 100vh;
 }
 
 .parallax {
@@ -56,27 +57,55 @@ body {
     font-weight: 800;
     font-style: normal;
 }
-
+.bookshelf {
+  top: -50%;
+  left: 50%;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  transform: scale(0.35, 0.35) translate(0, -100%);
+}
 .catshelf {
   padding-top: 10%;
-  align-self: center;
+  top: 50%;
+  left: 50%;
+}
+.book {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+.popup {
+  z-index: 100;
   text-align: center;
-  
+  display: inline-block;
 }
-.skeletonMeme {
-  position: fixed;
+.popup button {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #8d6110;
+  color: #610a0a;
+  border-radius: 5px;
+  border-color: #a06f14;
+}
+.backg {
+  margin: auto;
+  display: block;
+  width:50vw;
+  height:auto;
+  transform: translate(0,12.5%);
+}
+.fullscreen {
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  align-self: center;
   top: 50%;
   left: 50%;
+  fill: #f32177;
+  background-color: #1f1f1f7e;
+  z-index: -100;
 }
-.hauntedMansionPopup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-}
-.thrillerPopup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-}
-
-
