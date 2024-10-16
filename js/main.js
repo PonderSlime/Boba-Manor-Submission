@@ -8,6 +8,9 @@ let isPlayingT = false
 let isPlayingBTTF = false
 let isPlayingQ = false
 let isPlayingET = false
+let isPlayingO = false
+let isPlayingHP = false
+let isPlayingLOTR = false
 function toggleMute() {
     mute = !mute;
     checkAudioState();
@@ -55,6 +58,24 @@ function eTFn() {
     isPlayingET = !isPlayingET
     checkAudioState();
 }
+function orcFn() {
+    togglePlay(document.getElementById('orc-audio'));
+    popup(document.getElementById('orcPopup'));
+    isPlayingO = !isPlayingO
+    checkAudioState();
+}
+function hpFn() {
+    togglePlay(document.getElementById('hp-audio'));
+    popup(document.getElementById('hpPopup'));
+    isPlayingHP = !isPlayingHP
+    checkAudioState();
+}
+function lotrFn() {
+    togglePlay(document.getElementById('lotr-audio'));
+    popup(document.getElementById('lotrPopup'));
+    isPlayingLOTR = !isPlayingLOTR
+    checkAudioState();
+}
 
 function memeryBookFn() {
     popup(document.getElementById('memeryBook'));
@@ -74,10 +95,10 @@ function unmuteIcons() {
 function checkAudioState() {
     if (mute==false) {
         unmutePage();
-        if (isPlayingHM == true || isPlayingSSS == true || isPlayingT == true || isPlayingBTTF == true || isPlayingQ == true || isPlayingET == true) {
+        if (isPlayingHM == true || isPlayingSSS == true || isPlayingT == true || isPlayingBTTF == true || isPlayingQ == true || isPlayingET == true || isPlayingO == true || isPlayingHP == true || isPlayingLOTR == true) {
             bg.muted = true;
         }
-        else if (isPlayingHM == false || isPlayingSSS == false || isPlayingT == false || isPlayingBTTF == false || isPlayingQ == false || isPlayingET == false) {
+        else if (isPlayingHM == false || isPlayingSSS == false || isPlayingT == false || isPlayingBTTF == false || isPlayingQ == false || isPlayingET == false || isPlayingO == false || isPlayingHP == false || isPlayingLOTR == false) {
             bg.muted = false;
             bg.play()
         }
@@ -88,3 +109,22 @@ function checkAudioState() {
     }
     
 }
+
+function openFullscreen(elem) {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+}
+function closeFullscreen() {
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE11 */
+        document.msExitFullscreen();
+    }
+} 

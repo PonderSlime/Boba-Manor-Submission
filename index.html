@@ -44,6 +44,15 @@
             <audio id="e-t" class="audioFile" loop>
                 <source src="assets/music/ET Movie Theme.mp3">
             </audio>
+            <audio id="orc-audio" class="audioFile" loop>
+                <source src="assets/music/16 The End Of All Things.mp3">
+            </audio>
+            <audio id="hp-audio" class="audioFile" loop>
+                <source src="assets/music/double_trouble.mp3">
+            </audio>
+            <audio id="lotr-audio" class="audioFile" loop>
+                <source src="assets/music/17 The Breaking Of The Fellowship.mp3">
+            </audio>
 
             <audio id="quote1" src="./assets/music/clips/hello-my-name-is-inigo-montoya-you-killed-my-father-prepare-to-die.mp3" type="audio/mp3">
             <audio id="quote2" src="./assets/music/clips/listen-do-you-hear-that-is-the-sound-of-ultimate-suffering.mp3" type="audio/mp3">
@@ -61,11 +70,10 @@
         
         <div class="audioPause bats audioPauseButton" onclick="toggleMute(), batSpawn()"><i id="audioIcon" class="fas fa-volume-xmark audioPause" style="font-size: 30px;"></i></div>
         <div class="parallax creepster-regular">
-            <div class="rain"></div>
             <img src="./assets/images/cobweb_foreground.png" style="position: fixed;width: 100vw; height: auto; z-index: -1;">
                 <h1 class="welcome" style="padding-top: 100px; font-size: 7.5vw;">Welcome to the library</h1>
                 <div class="bookshelf">
-                    <div class="catshelf"><img src="./assets/images/Bookshelf with Cat and Books.svg" style="width: 2388px; height: auto;" usemap="#workmap"></div>
+                    <div class="catshelf"><img src="./assets/images/Bookshelf with Cat and Books.svg" style="width: 2388px;height: auto;"usemap="#workmap"></div>
                     <map name="workmap">
                         <area shape="rect" coords="941, 1620, 1486, 1729" onclick="hauntedMansionFn()" href="#hauntedMansion">
                         <area shape="rect" coords="505, 2269, 1098, 2380" onclick="spookyScarySkeletonFn()" href="#spookyScarySkeleton">
@@ -73,8 +81,13 @@
                         <area shape="rect" coords="438, 2155, 1038, 2267" onclick="backToTheFutureFn()" href="#backToTheFuture">
                         <area shape="poly" coords="1966, 1916, 2070, 1953, 2252, 1392, 2144, 1356" onclick="memeryBookFn()" href="#memeryBook">
                         <area shape="rect" coords="448, 2380, 1046, 2491" onclick="eTFn()" href="#et">
+                        <area shape="rect" coords="989, 1844, 1585, 1955" onclick="hpFn()" href="#hp">
+                        <area shape="rect" coords="1085, 1731, 1682, 1843" onclick="lotrFn()" href="#lotr">
                     </map>
                 </div>
+            <link href="https://hack.club/boba-manor">
+            <h1 class="welcome exit-link" style="padding-top: 50px; font-size: 7.5vw;"><a href="https://hack.club/boba-manor">Open The Door</a></h1>
+            <h1 class="welcome" style="padding-top: 500px; font-size: 7.5vw;" onclick="orcFn(), openFullscreen(document.getElementById('sauron'))">Still Here, Are You???</h1>
         </div>
         <div class="creepster-regular">
             <div class="book" id="skeletonMeme" style="display: none; align-items: center;align-self: center;transform: translate(-50%, -50%);">
@@ -126,12 +139,41 @@
 
             <div class="book" id="eTPopup" style="display: none; align-items: center;align-self: center;transform: translate(-50%, -50%);">
                 <div class="fullscreen">
-                    <img class="backg" src="./assets/images/books/Open Book HP.png" style="z-index: -100;">
+                    <img class="backg" src="./assets/images/books/Open Book .png" style="z-index: -100;">
                 </div>
                 <div class="popup">
                     <button class="creepster-regular" onclick="eTFn()">Close Book</button>
                     <img src="./assets/images/et-the-extra-terrestrial.webp" style="width:30vw; height:auto; align-self: center; text-align: center;">
                 </div>
+            </div>
+            <div class="book" id="hpPopup" style="display: none; align-items: center;align-self: center;transform: translate(-50%, -50%);">
+                <div class="fullscreen">
+                    <img class="backg" src="./assets/images/books/Open Book CON.png" style="z-index: -100;">
+                </div>
+                <div class="popup">
+                    <button class="creepster-regular" onclick="hpFn()">Close Book</button>
+                    <img src="./assets/images/double_trouble.jpg" style="width:35vw; height:auto; align-self: center; text-align: center;">
+                </div>
+            </div>
+            <div class="book" id="lotrPopup" style="display: none; align-items: center;align-self: center;transform: translate(-50%, -50%);">
+                <div class="fullscreen">
+                    <img class="backg" src="./assets/images/books/Open Book LOTR.png" style="z-index: -100;">
+                </div>
+                <div class="popup">
+                    <button class="creepster-regular" onclick="lotrFn()">Close Book</button>
+                    <img src="./assets/images/lotr.jpg" style="width:35vw; height:auto; align-self: center; text-align: center;">
+                </div>
+            </div>
+
+            <div class="book" id="orcPopup" style="display: none; align-items: center;align-self: center;transform: translate(-50%, -50%);">
+                <div class="fullscreen">
+                    <img class="backg" src="./assets/images/books/Open Book LOTR.png" style="z-index: -100;">
+                </div>
+                <div class="popup">
+                    <div id="sauron">
+                        <button class="creepster-regular" onclick="closeFullscreen(),orcFn()" style="transform: translate(0, -100px); font-size: 3vw;align-self: center;">RUN</button>
+                        <img src="./assets/images/Sauron-at-Mount-Doom.jpg" style="width:100vw; height:auto; align-self: center; text-align: center;">
+                    </div>
             </div>
         </div>
     </body>
