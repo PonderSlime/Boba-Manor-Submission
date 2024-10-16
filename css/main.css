@@ -18,10 +18,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Creepster';
-    color: crimson;
+    color: #ff4d00;
     background-color: #1f1f1f;
     height: 100vh;
 }
+
 
 .parallax {
   /* The image used */
@@ -35,6 +36,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: -100;
+    
 }
 
 .welcome {
